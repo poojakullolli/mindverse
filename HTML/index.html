@@ -1,91 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>🧠 MindVerse</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Behavior Insights Dashboard</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <h1>🧠 Welcome to MindVerse</h1>
-    <p><b>A simple behavior-based prediction website (HTML Version)</b></p>
+    <header class="header">
+        <div id="welcome-banner" class="welcome-banner hidden"></div>
+        <h1>User Behavior Insights Dashboard</h1>
+        <p>Enterprise-grade interaction analytics</p>
+        <div id="live-status" class="live-status">System initialized. Awaiting user interaction.</div>
+    </header>
 
-    <hr>
+    <main class="content-wrapper">
 
-    <!-- Section: Instructions -->
-    <h2>Instructions</h2>
-    <pre>
-1. Think of an option
-2. Take your time
-3. Click one option below
-4. Prediction will improve later using JavaScript
-    </pre>
+        <!-- Interaction Zone -->
+        <section class="card">
+            <h2>Interaction Zone</h2>
+            <ul>
+                <li class="category-block">
+                    <h3>Colors</h3>
+                    <div class="options-grid">
+                        <div class="option-container" data-option="Red">
+                            <a href="#" class="option">Red</a>
+                            <div class="progress-bar"><div class="progress-fill" id="progress-Red"></div></div>
+                        </div>
+                        <div class="option-container" data-option="Blue">
+                            <a href="#" class="option">Blue</a>
+                            <div class="progress-bar"><div class="progress-fill" id="progress-Blue"></div></div>
+                        </div>
+                        <div class="option-container" data-option="Green">
+                            <a href="#" class="option">Green</a>
+                            <div class="progress-bar"><div class="progress-fill" id="progress-Green"></div></div>
+                        </div>
+                    </div>
+                </li>
 
-    <hr>
+                <li class="category-block">
+                    <h3>Numbers</h3>
+                    <div class="options-grid">
+                        <div class="option-container" data-option="1">
+                            <a href="#" class="option">1</a>
+                            <div class="progress-bar"><div class="progress-fill" id="progress-1"></div></div>
+                        </div>
+                        <div class="option-container" data-option="2">
+                            <a href="#" class="option">2</a>
+                            <div class="progress-bar"><div class="progress-fill" id="progress-2"></div></div>
+                        </div>
+                        <div class="option-container" data-option="3">
+                            <a href="#" class="option">3</a>
+                            <div class="progress-bar"><div class="progress-fill" id="progress-3"></div></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-    <!-- Section: Color Choice -->
-    <h2>🎨 Choose a Color</h2>
-    <div>
-        <a href="result.html" target="_blank">🔴 Red</a><br><br>
-        <a href="result.html" target="_blank">🔵 Blue</a><br><br>
-        <a href="result.html" target="_blank">🟢 Green</a>
-    </div>
+        <!-- Insights Dashboard -->
+        <section class="card dashboard">
+            <h2>Behavioral Insights</h2>
+            <div class="dashboard-grid">
+                <div class="dash-card">
+                    <h3>Selected Option</h3>
+                    <p id="metric-selection">---</p>
+                </div>
+                <div class="dash-card">
+                    <h3>Decision Time</h3>
+                    <p id="metric-decision-time">---</p>
+                </div>
+                <div class="dash-card">
+                    <h3>Hover Time</h3>
+                    <p id="metric-hover-time">---</p>
+                </div>
+                <div class="dash-card">
+                    <h3>Behavior Profile</h3>
+                    <p id="metric-behavior-type">---</p>
+                </div>
+                <div class="dash-card">
+                    <h3>System Confidence</h3>
+                    <p id="metric-confidence">---</p>
+                </div>
+            </div>
+            <div class="suggestions-container">
+                <h3>Actionable Recommendation</h3>
+                <p id="smart-suggestion">Awaiting interaction data...</p>
+            </div>
+        </section>
 
-    <br>
+    </main>
 
-    <!-- Section: Number Choice -->
-    <h2>🔢 Choose a Number</h2>
-    <div>
-        <a href="result.html" target="_blank">1</a><br><br>
-        <a href="result.html" target="_blank">2</a><br><br>
-        <a href="result.html" target="_blank">3</a>
-    </div>
-
-    <br><br>
-
-    <!-- Prediction -->
-    <h2>🧠 Prediction</h2>
-    <p><b>Status:</b> <i>Analyzing your thoughts...</i></p>
-
-    <hr>
-
-    <!-- Image Section -->
-    <h2>🖼 Mind Visualization</h2>
-    <img src="/mindimage.jpg" alt="Mind Visualization" width="320" height="200">
-    <br><br>
-
-    <!-- Audio Section -->
-    <h2>🔊 Background Sound</h2>
-    <audio controls>
-        <source src="sample.mp3" type="audio/mpeg">
-        Your browser does not support audio.
-    </audio>
-
-    <br><br>
-
-    <!-- Video Section -->
-    <h2>🎥 Demo Video</h2>
-    <video width="320" height="200" controls>
-        <source src="sample.mp4" type="video/mp4">
-        Your browser does not support video.
-    </video>
-
-    <br><br>
-
-    <!-- Iframe Section -->
-    <h2>🌐 Live Mind Panel</h2>
-    <iframe width="320" height="150"
-        srcdoc="
-        <h3>🤖 Thinking...</h3>
-        <p>This area will show real prediction in future.</p>
-        ">
-    </iframe>
-
-    <br><br>
-
-    <hr>
-
-    <!-- Footer -->
-    <p><u>Note:</u> This is a basic HTML version. CSS and JavaScript will make it intelligent.</p>
-
+    <script src="../JAVASCRIPT/script.js" defer></script>
 </body>
 </html>
