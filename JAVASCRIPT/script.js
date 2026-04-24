@@ -50,12 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         highlightSelectedOption(selectedElement) {
             document.querySelectorAll('.option').forEach(opt => {
-                opt.style.opacity = '0.4';
-                opt.style.pointerEvents = 'none'; // Lock out further interaction
+                opt.classList.add('locked');
             });
-            selectedElement.style.opacity = '1';
-            selectedElement.style.borderColor = 'var(--accent-primary)';
-            selectedElement.style.background = '#f0f9ff';
+            selectedElement.classList.remove('locked');
+            selectedElement.classList.add('selected');
         },
 
         renderDashboard(results) {
